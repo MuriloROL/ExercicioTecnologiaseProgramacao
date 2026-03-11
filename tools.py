@@ -18,7 +18,7 @@ def celsius_para_fahrenheit(c):
 
 def fahrenheit_para_celsius(f):
     return (f - 32) * 5/9
-"""
+
 
 def buscar_produto(nome_produto):
     produtos = {
@@ -29,5 +29,19 @@ def buscar_produto(nome_produto):
 
     if nome_produto.lower() in produtos:
         return produtos[nome_produto.lower()]
+    
+    return "Produto não encontrado"
+
+"""
+
+def buscar_produto(nome_produto):
+    estoque = {
+        "notebook": 5,
+        "mouse": 3,
+        "teclado": 10
+    }
+
+    if nome_produto.lower() in estoque:
+        return estoque[nome_produto.lower()]
     
     return "Produto não encontrado"

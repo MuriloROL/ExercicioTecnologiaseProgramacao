@@ -27,12 +27,7 @@ def buscar_produto(nome_produto):
         "teclado": 150
     }
 
-    if nome_produto.lower() in produtos:
-        return produtos[nome_produto.lower()]
-    
-    return "Produto não encontrado"
 
-"""
 
 def buscar_produto(nome_produto):
     estoque = {
@@ -40,8 +35,41 @@ def buscar_produto(nome_produto):
         "mouse": 3,
         "teclado": 10
     }
-
-    if nome_produto.lower() in estoque:
-        return estoque[nome_produto.lower()]
     
     return "Produto não encontrado"
+
+
+
+eventos = []
+
+def criar_evento(titulo, data):
+    evento = {
+        "titulo": titulo,
+        "data": data
+    }
+
+    eventos.append(evento)
+
+    return f"Evento '{titulo}' criado para {data}"
+
+
+def listar_eventos():
+    if not eventos:
+        return "Nenhum evento encontrado"
+
+    resultado = ""
+
+    for e in eventos:
+        resultado += f"{e['titulo']} - {e['data']}\n"
+
+    return resultado
+
+
+"""""
+def buscar_clima(cidade: str):
+    clima = {
+        "sao paulo": "24°C e nublado",
+        "bauru": "30°C e ensolarado",
+        "curitiba": "18°C e chuvoso"
+    }
+    return clima.get(cidade, "Cidade não encontrado")
